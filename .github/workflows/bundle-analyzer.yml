@@ -40,8 +40,11 @@ jobs:
         run: pnpm bundle-size
 
       - name: get bundle size config
-        id: config
+        id: setup_config
         uses: ./.github/actions/bundle-size
+
+      - name: output setup_config
+        run: echo "${{ steps.setup_config.outputs.bundleSizeStr }}"
 
   generate-report: 
     needs: get-master-bundle-size
