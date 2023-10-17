@@ -7,3 +7,4 @@ const core = require("@actions/core");
 const filename = "bundle-size-report.txt";
 
 console.log({ filename });
+console.log("test");
