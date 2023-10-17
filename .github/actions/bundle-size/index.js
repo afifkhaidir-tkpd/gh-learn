@@ -6,12 +6,5 @@ const core = require("@actions/core");
 
 const filename = "bundle-size-report.txt";
 
-const result = fs.readFileSync(path.join(approotdir.get(), filename), "utf-8");
-
-const { bundleSizeOutput, bundleSizeFailed, possibleErrorMessage } =
-  bundler.readReportsText(result);
-core.setOutput("bundleSizeOutput", bundleSizeOutput);
-core.setOutput("bundleSizeFailed", bundleSizeFailed);
-core.setOutput("possibleErrorMessage", possibleErrorMessage);
-
-// fs.writeFileSync(path.join(approotdir.get(), "bundle-report.html"), commentMsg);
+console.log({ filename });
+console.log("test");
